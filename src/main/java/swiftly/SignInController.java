@@ -15,14 +15,15 @@ import java.util.LinkedHashMap;
 
 
 public class SignInController {
-    static  String WRONG_PASSWORD_MESSAGE = "Wrong password!";
-    static  String UNKNOWN_ERROR = "Unknown error occured!";
-    static  String USER_DISABLED_MESSAGE = "Your account is temporary suspended!";
+    static String WRONG_PASSWORD_MESSAGE = "Wrong password!";
+    static String UNKNOWN_ERROR = "Unknown error occured!";
+    static String USER_DISABLED_MESSAGE = "Your account is temporary suspended!";
 
     public PasswordField passwordField;
     public TextField emailField;
     public Text signInMessage;
     public Button signInButton;
+
     public void onForgotPassword(MouseEvent mouseEvent) {
         System.out.println("Reset password!");
     }
@@ -35,17 +36,17 @@ public class SignInController {
         payload.put("returnSecureToken", true);
         SwiftlyApp.getInstance().auth.addQuery("key", SwiftlyApp.getInstance().FIREBASE_API_KEY);
         var response = SwiftlyApp.getInstance().auth.post("accounts:signInWithPassword", payload);
-        if(response.getCode() != 200){
+        if (response.getCode() != 200) {
             var error = (LinkedHashMap<String, Object>) response.getBody().get("error");
             System.out.println(error.get("message"));
-            if(error.get("message").equals("USER_DISABLED")){
+            if (error.get("message").equals("USER_DISABLED")) {
                 signInMessage.setText(USER_DISABLED_MESSAGE);
-            }else{
+            } else {
                 signInMessage.setText(WRONG_PASSWORD_MESSAGE);
             }
-        }else if(response.getBody().get("error") != null){
+        } else if (response.getBody().get("error") != null) {
             signInMessage.setText(WRONG_PASSWORD_MESSAGE);
-        }else{ // success
+        } else { // success
             SwiftlyApp.getInstance().selectContent("main");
         }
 

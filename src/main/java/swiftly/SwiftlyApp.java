@@ -1,6 +1,5 @@
 package swiftly;
 
-import com.sun.javafx.util.Logging;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -15,19 +14,26 @@ import net.thegreshams.firebase4j.service.Firebase;
 import org.apache.log4j.Logger;
 
 public class SwiftlyApp extends Application {
+    public static final Logger LOGGER = Logger.getRootLogger();
+    private static SwiftlyApp instance;
     public Scene mainScene;
     public Firebase realtimeDatabase;
     public Firebase auth;
     public String FIREBASE_API_KEY = "AIzaSyBdmp-D0EiHlJRHz2haf65NgZrX0XciIIg";
     public Stage primaryStage;
-
-
-    private static SwiftlyApp instance;
     private ObservableList<Node> dynamicContent;
     private Parent signInContent;
     private Pane mainContent;
 
-    public static final Logger LOGGER = Logger.getRootLogger();
+    public static SwiftlyApp getInstance() {
+        if (instance == null) throw new RuntimeException("application didn't start yet!");
+        return instance;
+    }
+
+    public static void main(String[] args) {
+
+        launch(args);
+    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -54,10 +60,7 @@ public class SwiftlyApp extends Application {
         selectContent("signIn");
         primaryStage.show();
     }
-    public static SwiftlyApp getInstance(){
-        if(instance == null) throw new RuntimeException("application didn't start yet!");
-        return instance;
-    }
+
     public void selectContent(String content) {
         switch (content) {
             case "signIn":
@@ -75,10 +78,5 @@ public class SwiftlyApp extends Application {
             default:
                 throw new RuntimeException("Unknown content!");
         }
-    }
-
-    public static void main(String[] args)  {
-
-        launch(args);
     }
 }
