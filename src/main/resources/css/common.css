@@ -1,0 +1,128 @@
+.text-dim {
+    -fx-text-fill: #232628;
+    -fx-fill: #232628;
+}
+
+.text-darker {
+    
+    -fx-text-fill: #262A2C;
+    -fx-fill: #262A2C;
+}
+
+.text-dark {
+    -fx-text-fill: #2F3437;
+    -fx-fill: #2F3437;
+}
+
+.text-secondary {
+    -fx-text-fill: #A5A5A5;
+    -fx-fill: #A5A5A5;
+}
+
+.text-primary {
+    -fx-text-fill: #E7BB41;
+    -fx-fill: #E7BB41;
+}
+
+.text-danger {
+    -fx-text-fill: #DB5461;
+    -fx-fill: #DB5461;
+}
+
+.text-light {
+    -fx-text-fill: #F8ECC9;
+    -fx-fill: #F8ECC9;
+}
+
+.text-white {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.text-bold {
+    -fx-font-weight: bold;
+}
+
+.background-dim {
+    -fx-background-color: #232628;
+}
+
+.background-darker {
+    -fx-background-color: #262A2C;
+
+}
+
+.background-dark {
+    -fx-background-color: #2F3437;
+}
+
+.background-secondary {
+    -fx-background-color: #A5A5A5;
+}
+
+.background-primary {
+    -fx-background-color: #E7BB41;
+}
+
+.background-danger {
+    -fx-background-color: #DB5461;
+}
+
+.background-light {
+    -fx-background-color: #F8ECC9;
+}
+
+.background-white {
+    -fx-background-color: white;
+}
+
+.border-dim {
+    -fx-border-color: #232628;
+}
+
+.border-darker {
+    -fx-border-color: #262A2C;
+
+}
+
+.border-dark {
+    -fx-border-color: #2F3437;
+}
+
+.border-secondary {
+    -fx-border-color: #A5A5A5;
+}
+
+.border-primary {
+    -fx-border-color: #E7BB41;
+}
+
+.border-danger {
+    -fx-border-color: #DB5461;
+}
+
+.border-light {
+    -fx-border-color: #F8ECC9;
+}
+
+.border-white {
+    -fx-border-color: white;
+}
+
+.button {
+    -fx-border-radius: 5;
+    -fx-padding: 3 6 6 6;
+}
+
+.button:hover{
+    -fx-opacity: 0.85;
+}
+
+.input-field {
+    -fx-border-radius: 2pt;
+    -fx-padding: 10 10 10 10;
+}
+
+.label {
+    -fx-text-fill: rgb(134, 138, 143);
+}

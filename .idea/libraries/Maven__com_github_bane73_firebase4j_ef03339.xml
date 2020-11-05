@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.bane73:firebase4j:ef03339">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/bane73/firebase4j/ef03339/firebase4j-ef03339.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/bane73/firebase4j/ef03339/firebase4j-ef03339-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/bane73/firebase4j/ef03339/firebase4j-ef03339-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
