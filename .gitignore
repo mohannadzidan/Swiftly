@@ -46,8 +46,9 @@ cmake-build-*/
 # File-based project format
 *.iws
 
-# IntelliJ
+# Output
 out/
+target/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -66,6 +67,8 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
+
+*.class
 
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
