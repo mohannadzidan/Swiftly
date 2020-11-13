@@ -1,0 +1,54 @@
+/* 
+dim     :   #232628
+darker  :   #262A2C
+dark    :   #2F3437
+primary :   #E7BB41
+secondary:   #A5A5A5
+*/
+
+/* friends tab */
+
+.button {
+    -fx-background-color: #232628;
+    -fx-min-width: 75;
+}
+
+.button:hover {
+    -fx-background-color: #2F3437;
+}
+
+.button:pressed {
+    -fx-background-color: #2F3437;
+}
+
+.button .text {
+    -fx-font-weight: bold;
+    -fx-fill: #A5A5A5;
+}
+
+.button:pressed .text {
+    -fx-fill: white;
+}
+
+.add-friend-button {
+    -fx-background-color: #E7BB4177;
+}
+
+.add-friend-button .text {
+    -fx-fill: #E7BB41;
+    -fx-font-weight: 600;
+
+}
+
+.friend-row * {
+    -fx-fill: #A5A5A5;
+}
+
+.friend-row:hover {
+    -fx-background-color: #2F3437;
+}
+
+.friend-row .image-view {
+    -fx-background-radius: 200;
+    -fx-fill: #A5A5A5;
+}

@@ -4,46 +4,25 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 
-<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background-dim" stylesheets="@../css/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swiftly.SignInController">
-   <center>
-      <VBox maxWidth="360.0" styleClass="background-dark" BorderPane.alignment="CENTER">
+<HBox alignment="CENTER" spacing="3.0" styleClass="background-darker" stylesheets="@../css/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swiftly.controllers.SignInController">
+   <children>
+      <VBox maxWidth="1.7976931348623157E308" prefWidth="350.0" spacing="10.0" styleClass="background-dark">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-white" text="Welcome back," wrappingWidth="314.0">
+            <Label text="Sign in">
                <font>
                   <Font size="24.0" />
                </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-secondary" text="Sign in to continue" wrappingWidth="314.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Separator opacity="0.0" prefHeight="41.0" prefWidth="314.0">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Separator>
-            <Text fx:id="signInMessage" boundsType="VISUAL" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-danger" wrappingWidth="188.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-secondary" text="Email" wrappingWidth="314.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <TextField fx:id="emailField">
+            </Label>
+            <Label fx:id="signInMessage" maxHeight="1.7976931348623157E308" minHeight="0.0" styleClass="text-danger" wrapText="true" VBox.vgrow="NEVER" />
+            <TextField fx:id="emailField" promptText="E-mail">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -54,17 +33,7 @@
                   <String fx:value="text-white" />
                </styleClass>
             </TextField>
-            <Separator opacity="0.07" prefHeight="45.0" prefWidth="314.0">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Separator>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-secondary" text="Password" wrappingWidth="314.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <PasswordField fx:id="passwordField">
+            <PasswordField fx:id="passwordField" promptText="Password">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -77,14 +46,11 @@
             </PasswordField>
             <Hyperlink onAction="#onForgotPassword" text="Forget your password?">
                <styleClass>
-                  <String fx:value="text-primary" />
+                  <String fx:value="text-secondary" />
                   <String fx:value="text-bold" />
                </styleClass>
             </Hyperlink>
-            <Button fx:id="signInButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onLoginButton" prefHeight="50.0" prefWidth="314.0" text="Sign in">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
+            <Button fx:id="signInButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#signIn" prefHeight="35.0" prefWidth="0.0" style="-fx-background-radius: 100;" text="Sign in">
                <styleClass>
                   <String fx:value="background-primary" />
                   <String fx:value="text-dim" />
@@ -95,9 +61,62 @@
          <padding>
             <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
          </padding>
-         <effect>
-            <DropShadow color="#00000027" height="45.0" offsetY="10.0" radius="25.75" width="60.0" />
-         </effect>
       </VBox>
-   </center>
-</BorderPane>
+      <VBox prefWidth="350.0">
+         <children>
+            <Label text="Create Account">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="createAccountMessage" maxHeight="1.7976931348623157E308" minHeight="0.0" styleClass="text-danger" textFill="#ff0202" wrapText="true" />
+            <VBox spacing="10.0">
+               <children>
+                  <TextField fx:id="registerName" promptText="Name">
+                     <styleClass>
+                        <String fx:value="input-field" />
+                        <String fx:value="background-dim" />
+                        <String fx:value="border-secondary" />
+                        <String fx:value="text-white" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="registerEmail" promptText="E-mail">
+                     <styleClass>
+                        <String fx:value="input-field" />
+                        <String fx:value="background-dim" />
+                        <String fx:value="border-secondary" />
+                        <String fx:value="text-white" />
+                     </styleClass>
+                  </TextField>
+                  <PasswordField fx:id="registerPassword" promptText="Password">
+                     <styleClass>
+                        <String fx:value="input-field" />
+                        <String fx:value="background-dim" />
+                        <String fx:value="border-secondary" />
+                        <String fx:value="text-white" />
+                     </styleClass>
+                  </PasswordField>
+                  <PasswordField fx:id="registerPasswordConfirm" promptText="Confirm password">
+                     <styleClass>
+                        <String fx:value="input-field" />
+                        <String fx:value="background-dim" />
+                        <String fx:value="border-secondary" />
+                        <String fx:value="text-white" />
+                     </styleClass>
+                  </PasswordField>
+                  <Button fx:id="createAccountButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createAccount" prefHeight="35.0" prefWidth="0.0" style="-fx-background-radius: 100;" text="Create Account">
+                     <styleClass>
+                        <String fx:value="text-dim" />
+                        <String fx:value="text-bold" />
+                        <String fx:value="background-secondary" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</HBox>

@@ -1,17 +1,12 @@
-package swiftly;
+package swiftly.controllers;
 
-import javafx.scene.Parent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import net.thegreshams.firebase4j.error.FirebaseException;
-import net.thegreshams.firebase4j.service.Firebase;
+import swiftly.SwiftlyApp;
 
-public class MainController {
+public class TitleBarController {
     public AnchorPane titleBar;
-    public Parent root;
     private double xOffset, yOffset;
-
-
     public void minimize(MouseEvent mouseEvent) {
         SwiftlyApp.getInstance().primaryStage.setIconified(true);
     }

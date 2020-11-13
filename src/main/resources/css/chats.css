@@ -1,4 +1,68 @@
-.rounded-25{
+.rounded-25 {
     -fx-background-radius: 25;
     -fx-border-radius: 25;
 }
+
+/* bongo */
+.bongo {
+    -fx-background-color: transparent;
+    -fx-background-radius: 5;
+    -fx-margin: 20pt;
+}
+
+.bongo .label {
+    -fx-text-fill: #A5A5A5;
+    -fx-fill: #A5A5A5;
+}
+
+.bongo:hover {
+    -fx-background-color: #2F3437;
+}
+
+.bongo.selected {
+    -fx-background-color: white;
+}
+
+.bongo.notified .label {
+    -fx-text-fill: #E7BB41;
+    -fx-fill: #E7BB41;
+}
+
+.bongo.selected .label {
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+
+
+/* notification-indicator */
+.notification-indicator {
+    visibility: hidden;
+    
+
+}
+
+.notified .notification-indicator {
+    visibility: visible;
+    
+}
+
+.notified .notification-indicator *{
+    -fx-text-fill: #E7BB41;
+    -fx-fill: #E7BB41;
+}
+.notified .notification-indicator .label {
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+.notified.selected .notification-indicator * {
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+
+
+
+.notified.selected .notification-indicator .label {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+

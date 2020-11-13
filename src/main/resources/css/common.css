@@ -1,42 +1,112 @@
+/* scroll-bar */
+@font-face
+{
+    font-family: Comfortaa;
+    src: url("../fonts/Comfortaa-VariableFont_wght.ttf");
+}
+
+* {
+    -fx-font-family: Comfortaa;
+}
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-fit-to-width: true;
+    -fx-padding: 0.5em;
+
+}
+.scroll-pane >* {
+    -fx-background-color: transparent;
+}
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-padding:0;
+}
+
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: null;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    
+
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: rgba(255, 255, 255, 0.212);
+    -fx-background-radius: 5em;
+   
+}
+ .scroll-bar .decrement-arrow ,
+ .scroll-bar .increment-arrow {
+    visibility: hidden;
+    -fx-padding:1pt;
+}
+
+/* label */
+
+.label {
+    -fx-text-fill: #A5A5A5;
+    -fx-fill: #A5A5A5;
+}
+/* random */
+.button {
+    -fx-border-radius: 5;
+    -fx-padding: 3 6 6 6;
+}
+
+.button:hover{
+    -fx-opacity: 0.85;
+}
+
+.input-field {
+    -fx-border-radius: 2pt;
+    -fx-padding: 10 10 10 10;
+}
+
+
 .text-dim {
     -fx-text-fill: #232628;
-    -fx-fill: #232628;
+    
 }
 
 .text-darker {
     
     -fx-text-fill: #262A2C;
-    -fx-fill: #262A2C;
+    
 }
 
 .text-dark {
     -fx-text-fill: #2F3437;
-    -fx-fill: #2F3437;
+    
 }
 
 .text-secondary {
     -fx-text-fill: #A5A5A5;
-    -fx-fill: #A5A5A5;
+    
 }
 
 .text-primary {
     -fx-text-fill: #E7BB41;
-    -fx-fill: #E7BB41;
+    
 }
 
 .text-danger {
     -fx-text-fill: #DB5461;
-    -fx-fill: #DB5461;
+    
 }
 
 .text-light {
     -fx-text-fill: #F8ECC9;
-    -fx-fill: #F8ECC9;
+    
 }
 
 .text-white {
     -fx-text-fill: white;
-    -fx-fill: white;
 }
 
 .text-bold {
@@ -109,20 +179,35 @@
     -fx-border-color: white;
 }
 
-.button {
-    -fx-border-radius: 5;
-    -fx-padding: 3 6 6 6;
+.fill-dim {
+    -fx-fill: #262A2C;
 }
 
-.button:hover{
-    -fx-opacity: 0.85;
+.fill-darker {
+    -fx-fill: #262A2C;
+    
 }
 
-.input-field {
-    -fx-border-radius: 2pt;
-    -fx-padding: 10 10 10 10;
+.fill-dark {
+    -fx-fill: #2F3437;
 }
 
-.label {
-    -fx-text-fill: rgb(134, 138, 143);
+.fill-secondary {
+    -fx-fill: #A5A5A5;
+}
+
+.fill-primary {
+    -fx-fill: #E7BB41;
+}
+
+.fill-danger {
+    -fx-fill: #DB5461;
+}
+
+.fill-light {
+    -fx-fill: #F8ECC9;
+}
+
+.fill-white {
+    -fx-fill: white;
 }

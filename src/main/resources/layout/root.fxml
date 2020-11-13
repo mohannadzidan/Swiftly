@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox minWidth="200.0" styleClass="border-dim" stylesheets="@../css/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swiftly.MainController">
+<VBox minWidth="200.0" styleClass="border-dim" stylesheets="@../css/common.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="swiftly.controllers.TitleBarController">
     <children>
       <AnchorPane fx:id="titleBar" onMouseDragged="#windowDrag" onMousePressed="#windowDragStart" styleClass="background-dim">
          <children>
